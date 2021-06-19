@@ -1,0 +1,460 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    overflow: scroll;
+}
+
+body {
+    margin: 0;
+    background: black;
+    color: rgb(232 227 227);
+    font-family: "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+a {
+    color: rgb(255, 255, 255);
+}
+
+img {
+    height: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#notification {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.cv-spinner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px #ddd solid;
+    border-top: 4px #2e93e6 solid;
+    border-radius: 50%;
+    animation: sp-anime 0.8s infinite linear;
+}
+
+@keyframes sp-anime {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.logo-container>a {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills {
+    text-align: center;
+    font-weight: 500;
+}
+
+.skills>span {
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    margin: 0.4rem 0rem;
+    border: 1px solid gray;
+    display: inline-block;
+}
+
+.bg-java {
+    background-color: #f7f7f7;
+    color: #e51f24;
+}
+
+.bg-oop {
+    background-color: #e55126;
+    color: #fff;
+}
+
+.bg-spring {
+    background-color: #1b1f23;
+    color: #6db33f;
+}
+
+.bg-hibernate {
+    background-color: #f7f7f7;
+    color: #000;
+}
+
+.bg-hibernate .c1 {
+    color: #59666c;
+}
+
+.bg-hibernate .c2 {
+    color: #bcaf79;
+}
+
+.bg-mysql {
+    background-color: #fff;
+    color: #000;
+}
+
+.bg-mysql .c1 {
+    color: #00758f;
+}
+
+.bg-mysql .c2 {
+    color: #f39624;
+}
+
+.bg-html {
+    background-color: #dd4b24;
+    color: #fff;
+}
+
+.bg-css {
+    background-color: #264de4;
+    color: #fff;
+}
+
+.bg-js {
+    background-color: #efd81d;
+    color: #000;
+}
+
+.bg-jquery {
+    background-color: #0769ad;
+    color: #fff;
+}
+
+.bg-nodejs {
+    background-color: #333333;
+    color: #689f63;
+}
+
+.bg-electronjs {
+    background-color: #2f3241;
+    color: #74b1be;
+}
+
+.bg-puppeteerjs {
+    background-color: #fff;
+    color: #000;
+}
+
+.bg-playwrightjs {
+    background-color: #242526;
+    color: #fff;
+}
+
+.bg-expressjs {
+    background-color: #eeeeee;
+    color: #444;
+}
+
+.bg-reactjs {
+    background-color: #20232a;
+    color: #61dafb;
+}
+
+.bg-git {
+    background-color: #f0f0e8;
+    color: #4e443c;
+}
+
+.bg-unix {
+    background-color: #000000;
+    color: #f3f7e4;
+}
+
+.exp-edu-item:not(:last-of-type) {
+    margin-bottom: 4rem;
+}
+
+.exp-edu-item-role {
+    color: #006dcc;
+    margin-bottom: 1.5rem;
+}
+
+.exp-edu-item-company {
+    margin-bottom: 1.5rem;
+}
+
+.exp-edu-item-responsibilities {
+    font-size: 0.75rem;
+}
+
+a.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+
+
+header {
+    margin: 1rem 1rem 0 1rem;
+}
+
+header nav {
+    display: grid;
+    gap: 1rem;
+}
+
+header nav a {
+    display: block;
+    text-decoration: none;
+    background-color: rgb(14, 101, 201);
+    font-weight: 500;
+    border: 3px solid rgb(128, 128, 128);
+    padding: 0.1rem 0;
+    text-align: center;
+}
+
+header nav a:hover {
+    background-color: rgb(254, 207, 12);
+    color: rgb(0, 0, 0);
+}
+
+main {
+    margin: 3rem 0;
+}
+
+main .intro {
+    text-align: center;
+}
+
+main .intro .portrait {
+    height: 6rem;
+}
+
+main .intro .greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .intro .greeting span {
+    display: inline-block;
+    background-color: rgb(254, 207, 12);
+    color: rgb(0, 0, 0);
+    margin: 0.3rem 0;
+    padding: 0.3rem 1rem;
+    border: 3px solid rgb(128, 128, 128);
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+main .intro .mini-about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+main .about {
+    margin: 0 1rem;
+    display: grid;
+    justify-content: center;
+}
+
+main .about-item {
+    text-align: justify;
+    max-width: 40rem;
+    display: inline-block;
+}
+
+main .about-item-title {
+    text-align: center;
+    color: rgb(254, 207, 12);
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+main .about-item-description {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    line-height: 150%;
+    /* font-size: 0.8125rem; */
+}
+
+main p {
+    margin: 0;
+}
+
+
+main .contact #sendEmail {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+main .contact .title {
+    font-size: 2rem;
+}
+
+main .contact *:required {
+    background-image: url(/img/asterisk.svg);
+    background-repeat: no-repeat;
+    background-position: center right 12px;
+    background-size: 15px 15px;
+}
+
+main .contact input,
+main .contact textarea,
+main .contact button {
+    width: 100%;
+    line-height: 1.5;
+    padding: 15px 10px;
+    border: 1px solid #1a1a1a;
+    color: whitesmoke;
+    background: #242424;
+    transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25), transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+    font-family: inherit;
+    font-size: 100%;
+}
+
+main .contact textarea {
+    height: 10rem;
+    resize: none;
+}
+
+main .contact button {
+    cursor: pointer;
+}
+
+main .contact ::placeholder {
+    color: whitesmoke;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0 3rem 0;
+    margin: 0 3rem 0 3rem;
+    gap: 1rem;
+    border-top: 3px solid rgb(128, 128, 128);
+    margin-top: auto;
+}
+
+footer nav {
+    font-size: 1rem;
+}
+
+footer nav a {
+    text-decoration: none;
+
+    margin: 0 0.1rem;
+}
+
+footer nav a:hover {
+    color: rgb(254, 207, 12);
+}
+
+footer .dev {
+    font-size: 0.67rem;
+}
+
+@media screen and (min-width: 21em) {}
+
+@media screen and (min-width: 30em) {
+    header {
+        margin-top: 5rem;
+    }
+
+    header nav {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    header {
+        margin-top: 5rem;
+    }
+
+    header nav {
+        grid-template-columns: none;
+        grid-auto-flow: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    header nav a {
+        width: 10.649375rem;
+    }
+
+    main .about {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        max-width: 72rem;
+        margin: 0 auto;
+    }
+
+    main .about-item {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
