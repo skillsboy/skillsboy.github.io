@@ -1,6 +1,4 @@
-*,
-*:before,
-*:after {
+*, *:before, *:after {
     box-sizing: border-box;
 }
 
@@ -17,8 +15,7 @@ body {
     margin: 0;
     background: black;
     color: rgb(232 227 227);
-    font-family: "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -45,7 +42,6 @@ img {
     font-size: 2rem;
     padding: 1rem;
 }
-
 
 #overlay {
     position: fixed;
@@ -78,8 +74,6 @@ img {
         transform: rotate(360deg);
     }
 }
-
-
 
 .logo-container {
     display: flex;
@@ -231,14 +225,193 @@ a.disabled {
     opacity: 0.6;
 }
 
+/*
+    animations
+*/
 
+.flier {
+    pointer-events: none;
+}
 
+.flier> :nth-child(1) {
+    animation: fly1 20s linear infinite;
+    pointer-events: none !important;
+    top: 0;
+    left: 0;
+    height: 6.25rem;
+    transform: translateX(-100%) translateY(50vh) rotateZ(0deg);
+    position: fixed;
+    animation-delay: 1s;
+    z-index: 999999;
+}
 
+.flier> :nth-child(2) {
+    animation: fly2 50s linear infinite;
+    pointer-events: none !important;
+    top: 0;
+    left: 0;
+    height: 6.25rem;
+    transform: translateX(-120%) translateY(-120%) rotateZ(0deg);
+    position: fixed;
+    animation-delay: 4s;
+    z-index: 999999;
+}
 
+.flier> :nth-child(3) {
+    animation: fly3 10s linear infinite;
+    pointer-events: none !important;
+    top: 0;
+    left: 0;
+    height: 6.25rem;
+    transform: translateX(-120%) translateY(-120%) rotateZ(0deg);
+    position: fixed;
+    animation-delay: 2s;
+    z-index: 999999;
+}
 
+.flier> :nth-child(4) {
+    animation: fly4 7s linear forwards;
+    pointer-events: none !important;
+    top: 0;
+    left: 0;
+    height: 6.25rem;
+    transform: translateX(-120%) translateY(-120%) rotateZ(0deg);
+    position: fixed;
+    animation-delay: 1s;
+    z-index: 999999;
+}
 
+.flier> :nth-child(5) {
+    animation: fly5 7s linear infinite;
+    pointer-events: none !important;
+    top: 0;
+    left: 0;
+    height: 6.25rem;
+    transform: translateX(-120%) translateY(-120%) rotateZ(0deg);
+    position: fixed;
+    animation-delay: 1s;
+    z-index: 999999;
+}
 
+@keyframes fly1 {
+    0% {
+        transform: translateX(0vw) translateY(50vh) rotateZ(0deg);
+    }
+    25% {
+        transform: translateX(50vw) translateY(0vh) rotateZ(180deg);
+    }
+    50% {
+        transform: translateX(calc(100vw - 100%)) translateY(50vh) rotateZ(0deg);
+    }
+    75% {
+        transform: translateX(50vw) translateY(calc(100vh - 100%)) rotateZ(180deg);
+    }
+    100% {
+        transform: translateX(0vw) translateY(50vh) rotateZ(0deg);
+    }
+}
 
+@keyframes fly2 {
+    98.001%, 0% {
+        transform: translateX(-200%) translateY(100vh) rotateZ(0deg);
+    }
+    15% {
+        transform: translateX(100vw) translateY(-100%) rotateZ(180deg);
+    }
+    15.001%, 18% {
+        transform: translateX(100vw) translateY(-30%) rotateZ(0deg);
+    }
+    40% {
+        transform: translateX(-200%) translateY(3vh) rotateZ(-180deg);
+    }
+    40.001%, 43% {
+        transform: translateX(-200%) translateY(-100%) rotateZ(-180deg);
+    }
+    65% {
+        transform: translateX(100vw) translateY(50vh) rotateZ(0deg);
+    }
+    65.001%, 68% {
+        transform: translateX(20vw) translateY(-200%) rotateZ(180deg);
+    }
+    95% {
+        transform: translateX(10vw) translateY(100vh) rotateZ(0deg);
+    }
+}
+
+@keyframes fly3 {
+    0% {
+        transform: translateX(calc(100vw + 200%)) translateY(50vh) rotateZ(0deg);
+    }
+    25% {
+        transform: translateX(40vw) translateY(calc(0vh - 200%)) rotateZ(180deg);
+    }
+    50% {
+        transform: translateX(calc(0vw - 200%)) translateY(70vh) rotateZ(0deg);
+    }
+    75% {
+        transform: translateX(50vw) translateY(calc(100vh + 100%)) rotateZ(180deg);
+    }
+    100% {
+        transform: translateX(calc(100vw + 200%)) translateY(50vh) rotateZ(0deg);
+    }
+}
+
+@keyframes fly4 {
+    0% {
+        transform: translateX(10vw) translateY(calc(100vh - 100%)) rotateZ(0);
+    }
+    10% {
+        transform: translateX(10vw) translateY(calc(100vh - 180%)) rotateZ(0);
+    }
+    20% {
+        transform: translateX(10vw) translateY(calc(100vh - 100%)) rotateZ(0);
+    }
+    30% {
+        transform: translateX(10vw) translateY(calc(100vh - 150%)) rotateZ(0);
+    }
+    40% {
+        transform: translateX(10vw) translateY(calc(100vh - 100%)) rotateZ(0);
+    }
+    50% {
+        transform: translateX(10vw) translateY(calc(100vh - 120%)) rotateZ(0);
+    }
+    60% {
+        transform: translateX(10vw) translateY(calc(100vh - 100%)) rotateZ(0);
+    }
+    70% {
+        transform: translateX(10vw) translateY(calc(100vh - 110%)) rotateZ(0);
+    }
+    80% {
+        transform: translateX(10vw) translateY(calc(100vh - 100%)) rotateZ(0);
+    }
+    90% {
+        transform: translateX(10vw) translateY(calc(100vh - 100%)) rotateZ(0);
+    }
+    100% {
+        transform: translateX(10vw) translateY(calc(100vh - 100%)) rotateZ(0);
+    }
+}
+
+@keyframes fly5 {
+    0%, 100% {
+        transform: translateX(calc(100vw + 200%)) translateY(calc(100vh - 100%)) rotateZ(0deg);
+    }
+    30% {
+        transform: translateX(calc(10vw + 200%)) translateY(calc(100vh - 100%)) rotateZ(0deg);
+    }
+    60% {
+        transform: translateX(calc(10vw - 50%)) translateY(calc(100vh - 250%)) rotateZ(-180deg);
+    }
+    90% {
+        transform: translateX(calc(0vw - 100%)) translateY(calc(100vh - 100%)) rotateZ(-360deg);
+    }
+    90.1% {
+        transform: translateX(calc(0vw - 200%)) translateY(calc(100vh + 200%)) rotateZ(0);
+    }
+    90.2% {
+        transform: translateX(calc(100vw + 200%)) translateY(calc(100vh + 200%)) rotateZ(0deg);
+    }
+}
 
 header {
     margin: 1rem 1rem 0 1rem;
@@ -332,7 +505,6 @@ main p {
     margin: 0;
 }
 
-
 main .contact #sendEmail {
     display: flex;
     flex-direction: column;
@@ -353,9 +525,7 @@ main .contact *:required {
     background-size: 15px 15px;
 }
 
-main .contact input,
-main .contact textarea,
-main .contact button {
+main .contact input, main .contact textarea, main .contact button {
     width: 100%;
     line-height: 1.5;
     padding: 15px 10px;
@@ -381,14 +551,6 @@ main .contact ::placeholder {
     opacity: 1;
 }
 
-
-
-
-
-
-
-
-
 footer {
     display: flex;
     flex-direction: column;
@@ -406,7 +568,6 @@ footer nav {
 
 footer nav a {
     text-decoration: none;
-
     margin: 0 0.1rem;
 }
 
@@ -424,7 +585,6 @@ footer .dev {
     header {
         margin-top: 5rem;
     }
-
     header nav {
         grid-template-columns: 1fr 1fr;
     }
@@ -434,25 +594,21 @@ footer .dev {
     header {
         margin-top: 5rem;
     }
-
     header nav {
         grid-template-columns: none;
         grid-auto-flow: column;
         justify-content: center;
         gap: 2rem;
     }
-
     header nav a {
         width: 10.649375rem;
     }
-
     main .about {
         grid-template-columns: 1fr 1fr;
         justify-items: center;
         max-width: 72rem;
         margin: 0 auto;
     }
-
     main .about-item {
         margin-left: 1rem;
         margin-right: 1rem;
