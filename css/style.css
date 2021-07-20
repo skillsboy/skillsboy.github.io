@@ -555,6 +555,62 @@ main .contact ::placeholder {
     opacity: 1;
 }
 
+main .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .project {
+    display: flex;
+    flex-direction: column;
+    border: 0.0625rem solid hsla(0, 0%, 75%, 0.7);
+    border-radius: 0.3125rem;
+    background-color: hsla(0, 2%, 35%, 0.25);
+    margin: 1rem;
+}
+
+main .project-img img {
+    width: 100%;
+    border-radius: 0.3125rem 0.3125rem 0 0;
+}
+
+main .project-details {
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+main .project-title {
+    text-align: center;
+    color: rgb(254, 207, 12);
+    font-weight: 500;
+}
+
+main .project-description {
+    margin-top: 2rem;
+    text-align: justify;
+}
+
+main .project .skills {
+    margin-top: 3rem;
+}
+
+main .project-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+main .project-links .website {
+    text-decoration: none;
+    color: hsl(200, 97%, 45%);
+}
+
+main .project-links .github {
+    text-decoration: none;
+    color: hsl(88, 29%, 44%);
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -616,5 +672,38 @@ footer .dev {
     main .about-item {
         margin-left: 1rem;
         margin-right: 1rem;
+    }
+    main .projects {
+        align-items: unset;
+        max-width: 72rem;
+        margin: 0 auto;
+    }
+    main .project {
+        flex-direction: row;
+        height: 23.75rem;
+    }
+    main .project-details {
+        flex-grow: 1;
+        position: relative;
+    }
+    main .project-img>img {
+        width: unset;
+        border-radius: 0.3125rem 0 0 0.3125rem;
+    }
+    main .project-title {
+        font-weight: 500;
+        font-size: 1.125rem;
+    }
+    main .projects .skills {
+        text-align: unset;
+    }
+    main .project-links {
+        position: absolute;
+        bottom: 2rem;
+        left: 5rem;
+        right: 5rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
     }
 }
