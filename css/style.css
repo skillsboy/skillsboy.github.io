@@ -570,7 +570,7 @@ main .project {
     margin: 1rem;
 }
 
-main .project-img img {
+main .project-img>img {
     width: 100%;
     border-radius: 0.3125rem 0.3125rem 0 0;
 }
@@ -686,8 +686,14 @@ footer .dev {
         flex-grow: 1;
         position: relative;
     }
+    main .project-img {
+        width: 28rem;
+        flex-shrink: 0;
+    }
     main .project-img>img {
-        width: unset;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         border-radius: 0.3125rem 0 0 0.3125rem;
     }
     main .project-title {
