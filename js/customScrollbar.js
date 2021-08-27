@@ -1,6 +1,6 @@
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) throw "this script only works for non mobile";
 
-let imageUrl = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png";
+let imageUrl = "/img/charizard.png";
 let imageWidth = "100px";
 
 // inject css
