@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Miles Montgomery portfólio">
+    <title>Miles Montgomery</title>
+    <link rel="icon" type="image/png" href="img/pixelated-portrait.png">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+    <script src="js/sendEmail.js" defer></script>
+    <script src="js/customScrollbar.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact">
+            <form id="sendEmail">
+                <div class="title">Get in touch!</div>
+                <input id="email" type="email" placeholder="Email" required>
+                <textarea id="message" placeholder="Message" required></textarea>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="/">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="dev">Developed by @MilesMontgomery</div>
+    </footer>
+
+    <div id="overlay">
+        <div class="cv-spinner">
+            <span class="spinner"></span>
+        </div>
+    </div>
+
+    <div id="notification"></div>
+
+</body>
+
+</html>
