@@ -432,6 +432,8 @@ footer .dev {
 .overlay__body {
     position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
     font-size: 0.8rem;
     font-weight: 700;
     margin: 1rem;
