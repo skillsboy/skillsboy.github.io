@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: skillsboy.github.io
+Token: 67e4f7ca0e53241de8e7d342a98c1d7e8041c73f22578c0d23f646a67abafa48
