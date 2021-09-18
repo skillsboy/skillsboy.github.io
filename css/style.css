@@ -29,26 +29,6 @@ header {
     margin-bottom: 8rem;
 }
 
-header nav {
-    display: grid;
-    gap: 1rem;
-}
-
-header nav a {
-    display: block;
-    font-weight: 500;
-    background-color: rgb(14, 101, 201);
-    text-align: center;
-    border: 3px solid rgb(128, 128, 128);
-    padding: 0.1rem 0;
-    text-decoration: none;
-}
-
-header nav a:hover {
-    background-color: var(--my-yellow);
-    color: hsl(0, 0%, 0%);
-}
-
 main {
     margin-bottom: 3rem;
 }
@@ -75,6 +55,102 @@ footer nav a:hover {
 footer .dev {
     font-size: 0.67rem;
 }
+
+/**************** Navigation ****************/
+
+/********* Top nav *********/
+
+.top-nav {
+    display: none;
+    gap: 1rem;
+}
+
+.top-nav__item {
+    display: block;
+    font-weight: 500;
+    background-color: rgb(14, 101, 201);
+    text-align: center;
+    border: 3px solid rgb(128, 128, 128);
+    padding: 0.1rem 0;
+    text-decoration: none;
+}
+
+.top-nav__item:hover {
+    background-color: var(--my-yellow);
+    color: hsl(0, 0%, 0%);
+}
+
+/********* Bot nav *********/
+
+.bot-nav {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(14, 101, 201);
+    z-index: 10;
+    height: 3rem;
+}
+
+.bot-nav__item {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.bot-nav__item-desc {
+    font-size: 0.6875rem;
+}
+
+/********* Right side scroll nav *********/
+
+.side-dot-nav {
+    display: none;
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    text-align: right;
+}
+
+.side-dot-nav__item {
+    display: block;
+    text-decoration: none;
+    padding: 0.4rem 0;
+}
+
+.side-dot-nav__dot {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.side-dot-nav__label {
+    color: white;
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    transition: transform .2s, opacity .2s;
+    margin-right: 1rem;
+    opacity: 0;
+}
+
+.side-dot-nav__item.active .side-dot-nav__dot {
+    background: white;
+}
+
+.side-dot-nav__item:hover .side-dot-nav__label {
+    opacity: 1;
+}
+
+/*********  *********/
 
 .section {
     margin-bottom: 10rem;
@@ -511,18 +587,35 @@ footer .dev {
     }
 }
 
-@media (min-width: 48em) {}
+@media (min-width: 48em) {
+    /**************** Navigation ****************/
+    /********* Top nav *********/
+    .top-nav {
+        display: grid;
+    }
+    /********* Bot nav *********/
+    .bot-nav {
+        display: none;
+    }
+    /********* Right side scroll nav *********/
+    .side-dot-nav {
+        display: block;
+    }
+}
 
 @media (min-width: 62em) {
-    header nav {
+    /**************** Navigation ****************/
+    /********* Top nav *********/
+    .top-nav {
         grid-template-columns: none;
         grid-auto-flow: column;
         justify-content: center;
         gap: 2rem;
     }
-    header nav a {
+    .top-nav__item {
         width: 10.649375rem;
     }
+    /*********  *********/
     .section {
         width: 60rem;
         margin-left: auto;
