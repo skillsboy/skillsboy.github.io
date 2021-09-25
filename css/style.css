@@ -484,12 +484,14 @@ footer .dev {
 }
 
 .language-wrapper {
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .language {
     display: flex;
     align-items: center;
+    margin: 1rem;
 }
 
 .language__img {
@@ -583,6 +585,9 @@ footer .dev {
     }
     header nav {
         grid-template-columns: 1fr 1fr;
+    }
+    .language-wrapper {
+        flex-direction: row;
     }
 }
 
