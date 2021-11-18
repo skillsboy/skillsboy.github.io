@@ -412,6 +412,21 @@ footer .dev {
     font-size: 0.8125rem;
 }
 
+.timeline__responsibilities--collapsed {
+    display: none;
+}
+
+.timeline__more-info-btn {
+    background-color: transparent;
+    color: hsl(200, 97%, 45%);
+    cursor: pointer;
+    border: none;
+}
+
+.timeline__more-info-btn:hover {
+    text-decoration: underline;
+}
+
 .sendEmail {
     display: flex;
     flex-direction: column;
