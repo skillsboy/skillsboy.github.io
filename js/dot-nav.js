@@ -6,19 +6,14 @@
     let dot0 = document.getElementById("dot-0");
     let dot1 = document.getElementById("dot-1");
     let dot2 = document.getElementById("dot-2");
-    let dot3 = document.getElementById("dot-3");
     let sideDotNavLinks = document.querySelectorAll(".side-dot-nav>a");
 
-    window.addEventListener('resize', resize);
+    window.addEventListener("resize", resize);
 
     resize();
 
-
     function setActiveDot() {
-        if (isInView(contact)) {
-            removeActiveDots();
-            dot3.classList.add("active");
-        } else if (isInView(projects)) {
+        if (isInView(projects)) {
             removeActiveDots();
             dot2.classList.add("active");
         } else if (isInView(about)) {
@@ -31,7 +26,7 @@
     }
 
     function removeActiveDots() {
-        sideDotNavLinks.forEach(el => {
+        sideDotNavLinks.forEach((el) => {
             el.classList.remove("active");
         });
     }

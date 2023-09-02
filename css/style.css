@@ -599,7 +599,7 @@ footer .dev {
         margin-top: 5rem;
     }
     header nav {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
     .language-wrapper {
         flex-direction: row;
